@@ -1,0 +1,7 @@
+{
+    "name": "dyceman/steam_login",
+    "version": "0.1.2",
+    "type": "pagekit-extension",
+    "title": "Steam Login",
+    "author": "Dyceman <Daniel Fordyce>"
+}
