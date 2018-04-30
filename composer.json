@@ -1,7 +1,14 @@
 {
     "name": "dyceman/steam_login",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "type": "pagekit-extension",
     "title": "Steam Login",
-    "author": "Dyceman <Daniel Fordyce>"
+    "description": "Allow your visitors to use their steam account to log into your site.",
+	 "license": "MIT",
+	 "authors": [
+	    {
+	      "name": "Dyceman",
+	      "email": "danieltfordyce@gmail.com"
+	    }
+	  ]
 }
