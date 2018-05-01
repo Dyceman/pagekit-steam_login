@@ -16,18 +16,13 @@ window.SteamLogin = {
 
         save: function () {
             this.$broadcast('save', this.$data);
-            this.$resource('admin/steam_login/settings/save').save({steam_web_api_key: $data.steam_login.steam_web_api_key}).then(function () {
+            this.$resource('admin/steam_login/settings/save').save({steam_web_api_key: $data.steam_login.steam_web_api_key, domain: $data.steam_login.domain, steam_button_type: $data.steam_login.steam_button_type}).then(function () {
                         this.$notify('Settings saved.');
                     }, function (res) {
                         this.$notify(res.data, 'danger');
                     }
                 );
         }
-
-    },
-
-    components: {
-        system: require('./components/settings.vue')
 
     }
 

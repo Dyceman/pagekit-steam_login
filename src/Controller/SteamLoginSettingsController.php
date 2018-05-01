@@ -27,6 +27,8 @@ class SteamLoginSettingsController
 	        '$data' => [
                 'steam_login' => [
                     'steam_web_api_key' => $this->module->config['steam_web_api_key'],
+                    'domain' => $this->module->config['domain'],
+                    'steam_button_type' => (empty($this->module->config['steam_button_type'])) ? "01" : $this->module->config['steam_button_type']
                 ]
             ]
 	         
@@ -34,11 +36,13 @@ class SteamLoginSettingsController
     }
 
     /**
-     * @Request({"steam_web_api_key": "string"}, csrf=true)
+     * @Request({"steam_web_api_key": "string", "domain": "string", "steam_button_type": "string"}, csrf=true)
      */
-    public function saveAction($steam_web_api_key = "")
+    public function saveAction($steam_web_api_key = "", $domain = "localhost", $steam_button_type = "01")
     {
     	App::config('steam_login')->set('steam_web_api_key', $steam_web_api_key);
+        App::config('steam_login')->set('domain', $domain);
+        App::config('steam_login')->set('steam_button_type', $steam_button_type);
 
        	return ['message' => 'success'];
     }

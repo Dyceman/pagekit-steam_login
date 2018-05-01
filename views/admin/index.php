@@ -33,6 +33,29 @@
 					            <input id="steam_login-steam_web_api_key" class="uk-form-width-large" type="text" v-model="$data.steam_login.steam_web_api_key">
 					        </div>
 					    </div>
+
+                         <div class="uk-form-row">
+                            <label for="steam_login-domain" class="uk-form-label">{{ 'Steam Web API Domain' | trans }}</label>
+                            <div class="uk-form-controls">
+                                <input id="steam_login-domain" class="uk-form-width-large" type="text" v-model="$data.steam_login.domain">
+                            </div>
+                        </div>
+
+                        <div class="uk-form-row">
+                            <label for="steam_login-domain" class="uk-form-label">{{ 'Widget Button Type' | trans }}</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-radio" type="radio" id="one" value="01" v-model="$data.steam_login.steam_button_type">
+                                <label for="one"><img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_01.png"/></label>
+                                <br>
+                                <br>
+                                <input class="uk-radio" type="radio" id="two" value="02" v-model="$data.steam_login.steam_button_type">
+                                <label for="two"><img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_02.png"/></label>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+
+
                 </li>
             </ul>
 

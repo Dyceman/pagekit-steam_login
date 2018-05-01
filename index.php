@@ -20,7 +20,9 @@ return [
     ],
 
     'config' => [
-    	'steam_web_api_key' => ""
+    	'steam_web_api_key' => "",
+    	'domain' => "",
+    	'steam_button_type' => ""
     ],
 
     'resources' => [

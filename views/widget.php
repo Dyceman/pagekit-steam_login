@@ -12,8 +12,9 @@
 	}
 	else
 	{
+		$module = App::module('steam_login');
 		?>
-			<a href='steam_login'><img src='https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_01.png'></a>
+			<a href='steam_login'><img src='https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_<?= $module->config["steam_button_type"] ?>.png'></a>
 		<?php
 	}
 ?>

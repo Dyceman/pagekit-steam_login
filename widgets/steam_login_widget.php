@@ -15,9 +15,6 @@ return [
     ],
 
     'render' => function ($widget) use ($app) {
-
-        // ...
-
         return $app->view('steam_login/widget.php');
     }
 

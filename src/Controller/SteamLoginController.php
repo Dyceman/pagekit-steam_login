@@ -14,8 +14,10 @@ class SteamLoginController
 
     public function indexAction()
     {
+    	$module = App::module('steam_login');
+    	$domain = (empty($module->config['domain'])) ? "localhost" : $module->config['domain'];
 		try {
-			$openid = new LightOpenID("localhost"); 
+			$openid = new LightOpenID($domain); 
 			
 			if(!$openid->mode) {
 				$openid->identity = 'https://steamcommunity.com/openid';
@@ -34,12 +36,13 @@ class SteamLoginController
 					{
 						try
 						{
+							
 							$user = User::create([
 				                'registered' => new \DateTime,
 				                'name' => $steam->get("personaname"),
 				                'username' => $steam->get("steamid"),
 				                'password' => App::get('auth.password')->hash(App::get('auth.random')->generateString(32)),
-				                'email' => "steamlogin@localhost.com",
+				                'email' => "steamlogin@".$domain,
 				                'status' => User::STATUS_ACTIVE
 				            ]);
 

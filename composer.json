@@ -1,6 +1,6 @@
 {
     "name": "dyceman/steam_login",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "type": "pagekit-extension",
     "title": "Steam Login",
     "description": "Allow your visitors to use their steam account to log into your site.",
